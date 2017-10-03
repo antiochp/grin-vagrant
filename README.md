@@ -2,8 +2,8 @@
 Things we need -
 
 ```
-apt-get update
-apt-get install build-essential cmake
+sudo apt-get update -y
+sudo apt-get install build-essential cmake -y
 
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
