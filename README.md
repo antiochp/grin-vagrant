@@ -1,6 +1,7 @@
 
 Things we need -
 
+```
 apt-get update
 apt-get install build-essential cmake
 
@@ -21,3 +22,4 @@ cd node1
 
 # start a wallet receiver
 # start a mining node
+```
