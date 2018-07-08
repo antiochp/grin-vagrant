@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
 		# vb.gui = true
 
 		# Customize the amount of memory on the VM:
-		vb.memory = "2048"
+		vb.memory = "4096"
 	end
 
   # View the documentation for the provider you are using for more
@@ -65,7 +65,11 @@ Vagrant.configure("2") do |config|
 	# documentation for more information about their specific syntax and use.
 	config.vm.provision "shell", privileged: false, inline: <<-SHELL
 		sudo apt-get update
-		sudo apt-get install -y build-essential cmake
+		sudo apt-get install -y \
+			build-essential \
+			libclang-dev \
+			cmake \
+			libncurses-dev
 		curl https://sh.rustup.rs -sSf | sh -s -- -y
 	SHELL
 end
